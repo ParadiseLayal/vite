@@ -1,0 +1,15 @@
+{
+  "name": "vite",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@bitbucket.org:coderxpxx/vite.git",
+  "author": "loyal.pan <loyal.pan@shebaochina.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "dependencies": {
+    "vite": "^2.3.4"
+  }
+}
