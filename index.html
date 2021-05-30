@@ -4,9 +4,62 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>百叶窗</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+    }
+    body {
+      background-color: #95a5a6;
+      display: flex;
+      justify-content: center;
+    }
+    .a {
+      width: 1400px;
+      height: 300px;
+      position: relative;
+      top: 200px;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+    }
+    .b {
+      transition: .7s;
+      overflow: hidden;
+      margin-right: 20px;
+    }
+    .b:hover {
+      flex-shrink: 0;
+      flex-grow: 0;
+    }
+    .c {
+      width: 300px;
+      height: 300px;
+      
+    }
+    .c1 {
+      width: 500px;
+      background-color: antiquewhite;
+    }
+    .c2 {
+      background-color: aquamarine;
+    }
+    .c3 {
+      background-color: blueviolet;
+    }
+    .c4 {
+      background-color: cadetblue;
+    }
+
+  </style>
 </head>
 <body>
-  <script type="module" src="./src/js/index.js"></script>
+  <div class="a">
+    <div class="b"><div class="c c1">1</div></div>
+    <div class="b"><div class="c c2">1</div></div>
+    <div class="b"><div class="c c3">1</div></div>
+    <div class="b"><div class="c c4">1</div></div>
+  </div>
 </body>
 </html>
