@@ -1,0 +1,115 @@
+a,
+b,
+p,
+em,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+div,
+form,
+input,
+label,
+button,
+span,
+iframe,
+audio,
+video,
+html,
+body,
+:after,
+:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.clearfix::after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+html,
+body,
+input,
+form {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 14px;
+}
+
+a,
+a:hover {
+  text-decoration: none;
+}
+
+*,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+ul,
+li,
+span,
+label,
+input {
+  margin: 0;
+  padding: 0;
+  font-family: "PingFang SC", "Microsoft Yahei", "Helvetica Neue", Simsun,
+    Helvetica, Tahoma, Arial, sans-serif;
+}
+ul {
+  list-style: none;
+}
+button {
+  margin: 0;
+  padding: 0;
+  border: 1px solid transparent;
+  outline: none;
+  background: transparent;
+}
+button:focus {
+  outline: none;
+}
+
+.pull-left {
+  float: left;
+}
+.pull-right {
+  float: right;
+}
+.max-w-1200 {
+  max-width: 1200px;
+  width: 100%;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.max-w-1000 {
+  max-width: 1000px;
+  width: 100%;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.container {
+  max-width: 1400px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
