@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>background-clip半透明边框</title>
+		<style>
+			body {
+				background-color: #fdcb6e;
+				filter: blur();
+			}
+			main {
+				width: 100%;
+				padding: 60px 80px 80px;
+			}
+			div {
+				padding: 12px;
+				margin: 20px auto;
+				background-color: white;
+				border: 10px solid hsla(0, 0%, 100%, 0.5);
+			}
+			label {
+				color: #636e72;
+			}
+			input[id="pb"]:checked ~ div {
+				background-clip: padding-box;
+			}
+			input[id="pr"]:checked ~ div {
+				background-clip: content-box;
+			}
+			input[id="pl"]:checked ~ div {
+				background-clip: border-box;
+			}
+			input[id="pk"]:checked ~ div {
+				background-clip: text;
+				-webkit-background-clip: text;
+				color: transparent;
+			}
+		</style>
+	</head>
+	<body>
+		<main>
+			<input type="checkbox" checked id="pb" name="clip" />
+			<label for="pb">padding-box(默认)</label>
+			<input type="checkbox" id="pr" name="clip" />
+			<label for="pr">content-box</label>
+			<input type="checkbox" id="pl" name="clip" />
+			<label for="pl">border-box</label>
+			<input type="checkbox" id="pk" name="clip" />
+			<label for="pk">text</label>
+			<div>
+				Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam
+				exercitationem, repellat iure sed rem earum laudantium numquam aliquid
+				nostrum laborum voluptas libero veniam ut dolorum quia consectetur.
+				Veniam, enim sequi.
+			</div>
+		</main>
+	</body>
+</html>
