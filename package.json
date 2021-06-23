@@ -6,7 +6,7 @@
   "author": "loyal.pan <loyal.pan@shebaochina.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --host",
     "build": "vite build"
   },
   "dependencies": {
