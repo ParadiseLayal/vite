@@ -20,13 +20,26 @@
         -moz-osx-font-smoothing: grayscale;
       }
       .main {
-        background-color: rgba(255, 255, 255, 0.9);
         width: 100vw;
         height: 100vh;
         padding-top: 120px;
+        position: relative;
+        
+      }
+      .main::after {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        filter: blur(10px);
       }
       .main-href {
+        background: hsla(0, 0%, 100%, 0.5);
         max-width: 1200px;
+        padding: 24px;
+        margin: 0 auto;
+        box-shadow: 2px 2px 2px 1px hsla(0, 0%, 80%, 0.9);
       }
       h3 {
         margin-bottom: 24px;
@@ -35,14 +48,14 @@
       a {
         display: inline-block;
         text-decoration: none;
-        color: #00b894;
+        color: #050a09;
         font-size: 18px;
         padding: 8px;
         margin-left: 24px;
         margin-bottom: 24px;
       }
       a:hover {
-        text-decoration: underline solid #00b894;;
+        text-decoration: underline solid #101c1a;;
       }
     </style>
   </head>
@@ -64,6 +77,11 @@
         <a href="/src/html/vision-effect/box-shawod.html">常见投影</a>
         <a href="/src/html/vision-effect/filter.html">不规则投影</a>
         <a href="/src/html/vision-effect/hsla.html">毛玻璃效果</a>
+        <a href="/src/html/vision-effect/linear-gradient.html">文本行斑马条纹</a>
+        <a href="/src/html/vision-effect/text-shadow.html">常见的文字效果</a>
+        <a href="/src/html/vision-effect/text.html">文本截断</a>
+        <a href="/src/html/vision-effect/white-space.html">插入换行</a>
+        <a href="/src/html/vision-effect/resize.html">交互式图片对比控件</a>
       </div>
     </section>
   </body>
