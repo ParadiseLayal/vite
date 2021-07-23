@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Promise</title>
+</head>
+<body>
+  <script>
+    // 1
+    // const callback = () => {
+    //   const aBigObj = {
+    //     name: 'Backbencher'
+    //   };
+    //   console.log(aBigObj)
+    // }
+    // (async function() {
+    //   await new Promise((resolve) => {
+    //     setTimeout(() => {
+    //       callback()
+    //       resolve();
+    //     }, 2000)
+    //   })
+    // })()
+
+
+
+    // 2
+
+    // const callback = () => {
+    //   const aBigObj = new WeakRef({
+    //     name: 'Backbencher'
+    //   });
+    //   console.log(aBigObj.deref().name)
+    // }
+    // (async function() {
+    //   await new Promise((resolve) => {
+    //     setTimeout(() => {
+    //       callback()
+    //       resolve();
+    //     }, 2000)
+    //   })
+
+    //   await new Promise((resolve) => {
+    //     setTimeout(() => {
+    //       callback()
+    //       resolve();
+    //     }, 5000)
+    //   })
+    // })()
+
+
+    // 3
+    // const registry = new FinalizationRegistry((value) => {
+    //   console.log(value)
+    // });
+    // (function() {
+    //   const obj = {};
+    //   registry.register(obj, "Backbencher");
+    // })();
+
+    // 4 any随机输出A B or C all ['A', 'B', 'C']
+    // const p1 = new Promise((resolve, reject) => {
+    //   setTimeout(() => resolve("A"), Math.floor(Math.random() * 1000));
+    // });
+    // const p2 = new Promise((resolve, reject) => {
+    //   setTimeout(() => resolve("B"), Math.floor(Math.random() * 1000));
+    // });
+    // const p3 = new Promise((resolve, reject) => {
+    //   setTimeout(() => resolve("C"), Math.floor(Math.random() * 1000));
+    // });
+    // (async function() {
+    //     const result = await Promise.any([p1, p2, p3]);
+    //     console.log(result)
+    // })();
+
+    // 5
+    // const p = new Promise((resolve, reject) => reject());
+    // try {
+    //   (async function() {
+    //     const result = await Promise.any([p]);
+    //     console.log(result);
+    //   })();
+    // } catch(error) {
+    //   console.log(999, error.errors)
+    // }
+
+    // 6
+    var x = 1;
+    var y = 2;
+    x &&= y;
+    console.log(x);
+
+    x && (x = y)
+
+    if(x) {
+      x= y
+    }
+
+    x &&= y;
+    console.log(x);
+    x ||= y;
+    console.log(x);
+    x ??= y;
+    console.log(x);
+
+    var a;
+    var b = a ?? 5;
+    console.log(b);
+
+
+    var x;  
+    var y = 9;
+    x ??=y;
+    console.log(x);
+
+    x = x ?? (x = y);
+    console.log(x);
+
+
+    const billion = 1000_000_000_000_000_000n;
+    console.log(billion.toString());
+
+    const amount = 178_00;
+    console.log(amount);
+
+
+    // const str = "Backbencher sits at the Back";
+    // const newStr = str.replace("Back", "Front");
+    // console.log(newStr);
+
+    const str = "Backbencher sits at the Back";
+    const newStr = str.replace(/Back/g, "Front");
+    console.log(newStr);
+  </script>
+</body>
+</html>
