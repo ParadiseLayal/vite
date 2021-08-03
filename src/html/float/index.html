@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    img {
+      max-width: 100%;
+      border: 0;
+      display: block;
+    }
+    .wrap {
+      max-width: 1400px;
+      margin: 0 auto;
+      overflow: hidden;
+      position: relative;
+    }
+    .map {
+      background-color: aqua;
+    }
+    .map,
+    .data {
+      float: left;
+    }
+    .data {
+
+      height: 100%;
+    }
+    .data li {
+      width: 50%;
+      height: 50%;
+      border: 1px solid #eeeeee;
+    }
+    .bottom {
+      width: 30%;
+      padding: 40px;
+      margin-bottom: 200px;
+      /* background-color: aquamarine; */
+      
+
+    }
+    .line {
+      position: relative;
+      transform: translateY(50%);
+      background-color: rgba(101, 32, 7, 0.3);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      overflow: hidden;
+    }
+    .line-bg {
+      height: 1px;
+      background-color:cadetblue;
+      /* position: relative; */
+    }
+    .left, .right {
+      display: flex;
+      align-items: center;
+    }
+    .left {
+      flex: 1;
+      overflow: hidden;
+    }
+
+    .element {
+      display: inline-block;
+      height: 3px;
+      background-color: cyan;
+    }
+    .element1 {
+      width: 40px;
+    }
+    .element2 {
+      width: 3px;
+      transform: translateX(20px);
+    }
+    .element3 {
+      width: 3px;
+      transform: translateX(50px);
+    }
+    @keyframes move {
+      form {
+        transform: translateX(-100%);
+      }
+      /* 50% {
+        transform: translateX(0%);
+      } */
+      to {
+        transform: translateX(100%);
+      }
+    }
+    .cursor {
+      position: relative;
+      height: 1px;
+      width: 100%;
+      background-image: linear-gradient(90deg, rgba(0,0,0,0.5) 0%, rgba(36, 201, 255, 0.9) 100%);
+      /* animation: move 2s linear infinite; */
+      
+    }
+    .right span {
+      display: inline-block;
+      width: 40px;
+      height: 7px;
+      background-color: darkolivegreen;
+    }
+    .right span + span {
+      margin-left: 4px;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="bottom">
+    <div class="line">
+      <div class="left">
+        <span class="element element1"></span>
+        <span class="element element2"></span>
+        <span class="element element3"></span>
+        <div class="cursor"></div>
+      </div>
+      <div class="right">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+    <div class="line-bg"></div>
+  </div>
+
+
+
+
+
+  <div class="wrap">
+    <div class="map">
+      <img src="../../images/sitemap.png" alt="">
+    </div>
+    <ul class="data">
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+      <li>4</li>
+    </ul>
+  </div>
+</body>
+<script>
+  // let array = new Array(7).fill(9)
+  let array = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+  console.log(array)
+  // slice() 方法返回一个新的数组对象，这一对象是一个由 begin 和 end 决定的原数组的浅拷贝（包括 begin，不包括end）。原始数组不会被改变。
+  let slice = array.slice(3, 5)
+  console.log('slice', slice, array)
+
+
+  let array1 = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+  let splice = array1.splice(0, 3, 10, 11, 12, 13, 14, {7777: 88888})
+  console.log('splice', splice, array1)
+
+
+  let string = 'abcd1234'
+
+  let sliceString = string.slice(4, 6)
+  console.log(sliceString)
+
+</script>
+</html>
